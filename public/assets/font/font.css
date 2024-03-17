@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "yekan-bakh-hairline";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 01 Hairline.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-thin";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 02 Thin.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-light";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 03 Light.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-Regular";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 04 Regular.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-Medium";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 05 Medium.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-Bold";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 06 Bold.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-Heavy";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 07 Heavy.ttf");
+}
+
+@font-face {
+  font-family: "yekan-bakh-Fat";
+  src: url("Yekan Bakh/Yekan Bakh FaNum 08 Fat.ttf");
+}
+
+@font-face {
+  font-family: "poppins-black";
+  src: url("Poppins/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "poppins-black-italic";
+  src: url("Poppins/Poppins-BlackItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-bold";
+  src: url("Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "poppins-bold-italic";
+  src: url("Poppins/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-extra-bold";
+  src: url("Poppins/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "poppins-extra-bold-italic";
+  src: url("Poppins/Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-extra-light";
+  src: url("Poppins/Poppins-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "poppins-extra-light-italic";
+  src: url("Poppins/Poppins-ExtraLightItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-italic";
+  src: url("Poppins/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-light";
+  src: url("Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "poppins-light-italic";
+  src: url("Poppins/Poppins-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-medium";
+  src: url("Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "poppins-medium-italic";
+  src: url("Poppins/Poppins-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url("Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "poppins-semi-bold";
+  src: url("Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "poppins-black-italic";
+  src: url("Poppins/Poppins-SemiBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "poppins-thin";
+  src: url("Poppins/Poppins-Thin.ttf");
+}
+
+@font-face {
+  font-family: "poppins-thin-italic";
+  src: url("Poppins/Poppins-ThinItalic.ttf");
+}
+
+
+div{
+  font-family: "yekan-bakh-Medium" !important;
+
+}
+span{
+  font-family: "yekan-bakh-Medium" !important;
+
+}
+li{
+  font-family: "yekan-bakh-Medium" !important;
+
+}

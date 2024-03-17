@@ -1,0 +1,37 @@
+.archive-banner{
+    background-color: #C90000;
+    height: 200px;
+}
+.archive-banner img{
+    width: 100px;
+    border-radius: 20px !important;
+}
+
+.food-col{
+    background-color: #fff;
+    height: auto;
+    direction: rtl;
+}
+.food-col-image img{
+    width: 100%;
+}
+
+.food-col-description{
+    font-size: 11px;
+    color: #777;
+}
+.food-col-title{
+    font-size: 14px;
+    margin-bottom: 10px;
+   font-weight: bolder;
+    color: #222;
+}
+
+.food-col-price{
+background-color: #C90000;
+padding: 4px;
+border-radius: 4px !important;
+padding-left: 4px;
+padding-right: 4px;
+color: #fff;
+}

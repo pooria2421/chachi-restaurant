@@ -1,0 +1,11 @@
+.archive-image{
+    
+}
+
+.archive-image img{
+    width: 100% !important;
+    border-radius: 14px !important;
+}
+.MuiButtonBase-root{
+    text-align: right !important;
+}
