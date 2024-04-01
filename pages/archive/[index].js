@@ -2,11 +2,16 @@ import Header from "@/components/header";
 import RootLayout from "../layout";
 import { Box, Tab  , Tabs} from "@mui/material";
 import BasicTabs from "@/components/tabs";
+import { useEffect, useState } from "react";
+import strapi from "@/axios";
 
 export default function Archive(){
     function handleChange(){
         
     }
+ 
+
+
     return(
         <RootLayout>
                     <Header/>
