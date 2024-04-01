@@ -12,8 +12,13 @@
     height: 140px;
     direction: rtl;
 }
+.food-col-image{
+    background-size: contain !important;
+
+}
 .food-col-image img{
     width: 100%;
+    background-size: contain !important;
 }
 
 .food-col-description{
