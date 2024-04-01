@@ -14,11 +14,14 @@
 }
 .food-col-image{
     background-size: contain !important;
+    background-repeat: no-repeat !important;
+
 
 }
 .food-col-image img{
     width: 100%;
     background-size: contain !important;
+    background-repeat: no-repeat !important;
 }
 
 .food-col-description{
