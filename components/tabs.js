@@ -10,6 +10,8 @@ import strapi from '@/axios';
 import { useState } from 'react';
 import QueryString from 'qs';
 import { useRouter } from 'next/router';
+import { IS_LOADER } from '@/redux/actions';
+import { useDispatch } from 'react-redux';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,6 +55,8 @@ export default function BasicTabs() {
     strapi
     .get(url)
     .then((response) => {
+      dispatch({ type: IS_LOADER, payload: false });
+
 
       const data = response.data.data;
       const productList = data.map((item) => ({
@@ -71,14 +75,20 @@ console.log(productList)
     })
 
     .catch((error) => {
+      dispatch({ type: IS_LOADER, payload: false });
+
       setList([{}]);
       console.log(error);
     });
 
   }
 
-  
-  const handleChange = (event, newValue,value) => {    
+  const dispatch = useDispatch();
+
+  const handleChange = (event, newValue,value) => {   
+
+    dispatch({ type: IS_LOADER, payload: true });
+
     console.log(newValue)
     setValue(newValue)
     const generateLink =

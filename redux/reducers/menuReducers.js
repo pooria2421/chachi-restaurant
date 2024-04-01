@@ -1,8 +1,9 @@
-import { OPEN_MENU } from "../actions";
+import { IS_LOADER, OPEN_MENU } from "../actions";
 
 
 const initialState = {
-   isOpen : false
+   isOpen : false,
+   isLoader : false 
 };
 
 export const MenuRreducer = (state = initialState, action) => {
@@ -12,11 +13,12 @@ export const MenuRreducer = (state = initialState, action) => {
         ...state,
         isOpen: action.payload.isOpen,
       };
+      case IS_LOADER:
+        return {
+          ...state,
+          isLoader: action.payload
+        };
 
-      return {
-        ...state,
-        booksBuy: [],
-      };
     default:
       return state;
   }

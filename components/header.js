@@ -11,6 +11,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import strapi from "@/axios";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import QueryString from "qs";
 
 export default function Header(){
   const [state, setState] = React.useState({
@@ -20,6 +25,7 @@ export default function Header(){
     right: false,
   });
 
+  const router = useRouter()
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -27,6 +33,38 @@ export default function Header(){
 
     setState({ ...state, [anchor]: open });
   };
+
+
+  const [archives, setArchives] = useState([]);
+
+  useEffect(() => {
+    strapi
+      .get(
+        "/archives?populate=*" +
+          "&" +
+          QueryString.stringify(
+            {
+              filters: {},
+            },
+            { encode: false }
+          )
+      )
+
+      .then((response) => {
+        const data = response.data.data;
+
+        const achiveList = data.map((item) => ({
+          id: item.id,
+          archiveName: item.attributes.archiveName,
+        }));
+
+        setArchives(achiveList);
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [router.query]);
 
   const list = (anchor) => (
     <Box
@@ -36,10 +74,10 @@ export default function Header(){
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['کباب' , 'پیتزا'].map((text, index) => (
+        {archives.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton style={{textAlign:'right'}}>
-          <Link href={'/archive/1'} style={{color:'#444' , textAlign:'right'}}> {text}</Link>
+          <Link href={`/archive/${text.archiveName}`} style={{color:'#444' , textAlign:'right'}}> {text.archiveName}</Link>
              </ListItemButton>
           </ListItem>
         ))}

@@ -7,10 +7,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import strapi, { baseURLImage } from "@/axios";
 import QueryString from "qs";
+import { useSelector } from "react-redux";
 
 export default function mainPage(){
 
   const [archives, setArchives] = useState([]);
+
+  const getLoader = useSelector((state) => state.menuRreducer.isLoader);
+
 
   useEffect(() => {
     strapi
@@ -43,7 +47,7 @@ export default function mainPage(){
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [getLoader]);
 
     return (
         <RootLayout>    

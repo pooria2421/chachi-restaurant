@@ -3,6 +3,6 @@ import { MenuRreducer } from './menuReducers'
 
 export default combineReducers({
 
-    MenuRreducer : MenuRreducer
+    menuRreducer : MenuRreducer
     
 })
