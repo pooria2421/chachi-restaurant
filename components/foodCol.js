@@ -13,7 +13,7 @@ export default function FoodCol({productName,productPrice,productDescription,pro
       return str;
     }
     return (
-        <div className="col-xs-12 col-lg-12 food-col d-flex mt-2 mb-2 p-2" style={{paddingLeft:'14px' , paddingRight:'14px',justifyContent:'space-between'}}>
+        <div className="col-12 food-col d-flex mt-2 mb-2 p-2" style={{paddingLeft:'14px' , paddingRight:'14px',justifyContent:'space-between'}}>
             <div className="col-xs-5 col-lg-5" style={{display:'flex' , flexDirection:'column' , justifyContent:'space-around'}}>
           <div className="">
             <div className="food-col-title">{productName}</div>
