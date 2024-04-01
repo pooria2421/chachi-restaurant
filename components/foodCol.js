@@ -25,7 +25,7 @@ export default function FoodCol({productName,productPrice,productDescription,pro
             </div>
             </div>
 
-            <div className="food-col-image col-6" style={{background:`url(${baseURLImage+gallery[0].url})`,backgroundSize:'cover',backgroundRepeat:'no-repeat'}} ></div>
+            <div className="food-col-image col-6" style={{background:`url(${baseURLImage+gallery[0].url})`,backgroundSize:'contain',backgroundRepeat:'no-repeat'}} ></div>
 
             </div> 
         </div>

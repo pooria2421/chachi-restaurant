@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.13",
     "antd": "^5.12.4",
+    "axios": "^1.6.8",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "jquery": "^3.7.1",
