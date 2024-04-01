@@ -58,13 +58,20 @@ export default function mainPage(){
         
         </div>
 
+        <div className="col-12 text-center mt-3">
+        <div className="col-5 m-auto pb-1" style={{borderBottom:'2px solid red'}}>  دسته بندی</div>
+          </div>
 
-           <div className="archive d-flex d-flex mt-3">
+
+           <div className="archive d-flex flex-wrap d-flex mt-3">
             {
               archives.map((element=>(
 
             
-           <div className="col-xs-4 col-lg-4 archive-image p-3"><Link href={`/archive/${element.archiveName}`}><img src={baseURLImage+element.gallery[0].url}/></Link></div>
+           <div className="col-4 archive-image p-3 mt-2">
+            <Link href={`/archive/${element.archiveName}`}><img src={baseURLImage+element.gallery[0].url}/></Link>
+            <div className="col-12 mt-2" style={{textAlign:'center'}}>{element.archiveName}</div>
+           </div>
            ))) 
           }
            </div>

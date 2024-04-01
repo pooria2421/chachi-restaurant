@@ -75,10 +75,12 @@ export default function Header(){
     >
       <List>
         {archives.map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem key={text} disablePadding dir="rtl">
+              <Link href={`/archive/${text.archiveName}`} style={{color:'#444' , textAlign:'right'}} className="col-12"> 
             <ListItemButton style={{textAlign:'right'}}>
-          <Link href={`/archive/${text.archiveName}`} style={{color:'#444' , textAlign:'right'}}> {text.archiveName}</Link>
+        {text.archiveName}
              </ListItemButton>
+             </Link>
           </ListItem>
         ))}
       </List>

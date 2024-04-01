@@ -47,9 +47,18 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
+
   const [value, setValue] = React.useState(0);
   const [list, setList] = useState([]);
   const router = useRouter();
+  const [archiveName , setArchive] = useState()
+
+
+  useEffect(() => {
+
+ setArchive(router.query.index)
+
+  },[router.query])
 
   function getProduct(url){
     strapi
@@ -88,7 +97,7 @@ console.log(productList)
   const handleChange = (event, newValue,value) => {   
 
     dispatch({ type: IS_LOADER, payload: true });
-
+    setArchive(newValue)
     console.log(newValue)
     setValue(newValue)
     const generateLink =
@@ -186,7 +195,9 @@ archives.map((element)=>(
 
         </Tabs>
       </Box>
-
+      <div className="col-12 mt-3 mb-3 pr-2 pl-2" style={{textAlign:'right'}}>
+  <div className="col-4 pb-1 mr-2 ml-2 pr-2 pl-2" style={{borderBottom:'2px solid red',float:'right',marginBottom:'20px'}}> {archiveName}</div>
+    </div>
 {
 
   list.map(element=>(
