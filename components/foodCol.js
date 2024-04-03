@@ -23,7 +23,7 @@ export default function FoodCol({productName,productPrice,productDescription,pro
             <Rating name="disabled" value={productStar} disabled />
              </div>
             </div>
-            <div className="col-7 d-flex" style={{justifyContent:'space-between'}}>
+            <div className="col-7 d-flex" style={{justifyContent:'flex-end'}}>
                 
           <div className="col-5" style={{display:'flex' , flexDirection:'column' , justifyContent:'center'}}>
             <div className="food-col-price d-flex justify-content-between"><span style={{fontWeight:'bolder',borderRadius:'10px' , fontSize:'11px'}}>{toRial(productPrice.toString())}</span> <span className="d-flex align-items-center" style={{fontSize:'11px'}}>تومان</span></div>
