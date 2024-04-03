@@ -25,8 +25,8 @@ export default function FoodCol({productName,productPrice,productDescription,pro
             </div>
             <div className="col-7 d-flex" style={{justifyContent:'flex-end'}}>
                 
-          <div className="col-5" style={{display:'flex' , flexDirection:'column' , justifyContent:'center'}}>
-            <div className="food-col-price d-flex justify-content-between"><span style={{fontWeight:'bolder',borderRadius:'10px' , fontSize:'11px'}}>{toRial(productPrice.toString())}</span> <span className="d-flex align-items-center" style={{fontSize:'11px'}}>تومان</span></div>
+          <div className="col-4" style={{display:'flex' , flexDirection:'column' , justifyContent:'center'}}>
+            <div className="food-col-price d-flex justify-content-between"><span style={{fontWeight:'bolder',borderRadius:'10px' , fontSize:'12px'}}>{toRial(productPrice.toString())}</span> <span className="d-flex align-items-center" style={{fontSize:'11px'}}>تومان</span></div>
             <div className="d-flex justify-content-between align-items-center mt-2">
             <span style={{fontSize:'12px'}}>سفارش</span>
             <span><img src="/assets/images/phoneRed.png" width={'12'}/></span>
