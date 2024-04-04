@@ -13,6 +13,9 @@ export default function mainPage(){
 
   const [archives, setArchives] = useState([]);
 
+
+  const [banners, setBanner] = useState([]);
+
   const getLoader = useSelector((state) => state.menuRreducer.isLoader);
 
 
@@ -49,6 +52,45 @@ export default function mainPage(){
       });
   }, [getLoader]);
 
+
+
+
+
+  useEffect(() => {
+    strapi
+      .get(
+        "/banners?populate=*" +
+          "&" +
+          QueryString.stringify(
+            {
+              filters: {},
+            },
+            { encode: false }
+          )
+      )
+
+      .then((response) => {
+        const data = response.data.data;
+
+        const bannerList = data.map((item) => ({
+          id: item.id,
+          bannerName: item.attributes.bannerName,
+          bannerLink : item.attributes.bannerLink,
+          gallery:
+          item.attributes.gallery.data !== null
+            ? item.attributes.gallery.data.map((image) => image.attributes)
+            : "",
+        }));
+
+        setBanner(bannerList);
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [getLoader]);
+
+
     return (
         <RootLayout>    
         <Header/>
@@ -72,9 +114,26 @@ export default function mainPage(){
             <Link href={`/archive/${element.archiveName}`}><img src={baseURLImage+element.gallery[0].url}/></Link>
             <div className="col-12 mt-2" style={{textAlign:'center'}}>{element.archiveName}</div>
            </div>
+           
            ))) 
           }
            </div>
+
+
+          <div className="mt-4 col-12">
+           
+           {
+            banners.map(element=>(
+
+       
+            <div className="col-12">
+            <Link href={element.bannerLink}>
+              <img src={baseURLImage+element.gallery[0].url} style={{width:'100%'}}></img>
+            </Link>
+            </div>
+                 )) 
+}
+          </div>
                 
 
 
