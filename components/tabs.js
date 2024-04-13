@@ -184,7 +184,10 @@ console.log(productList)
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" style={{direction:'rtl'}}>
+        <Tabs value={value} 
+          scrollButtons
+          allowScrollButtonsMobile
+        onChange={handleChange} aria-label="basic tabs example" style={{direction:'rtl'}}>
         
         {
 archives.map((element)=>(
