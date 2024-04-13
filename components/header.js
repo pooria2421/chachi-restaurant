@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import QueryString from "qs";
+import Head from "next/head";
 
 export default function Header(){
   const [state, setState] = React.useState({
@@ -90,8 +91,13 @@ export default function Header(){
   );
 
     return (
+      <>
+       <Head>
+        <title>رستوران ارم</title>
+      <link rel="shortcut icon" href="/assets/images/logo.png" />
+    </Head>
        <div className="top-header d-flex align-items-center justify-content-between mb-2">
-         <div className=""><img src="/assets/images/logo.png" width={'28'}/></div>
+         <div className=""><Link href={'/'} style={{color:'#444' , textDecoration:'none'}}><img src="/assets/images/logo.png" width={'28'}/></Link></div>
          <div className=""><Link href={'/'} style={{color:'#444' , textDecoration:'none'}}>رستوران ارم</Link></div>
          <div className="" onClick={toggleDrawer('right', true)}><img src="/assets/images/archive.svg" width={'28'}/></div>
           <Drawer
@@ -103,6 +109,6 @@ export default function Header(){
           </Drawer>
 
          </div>
-
+</>
     )
 }

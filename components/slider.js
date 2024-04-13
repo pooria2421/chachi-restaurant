@@ -74,7 +74,11 @@ function Item(props)
     return (
         <Paper>
         <Link href={props.item.sliderLink}>
-        <div className="food-col-image col-6" style={{background:`url(${baseURLImage+ props.item.gallery[0] == "" || props.item.gallery[0] == undefined ? '' : baseURLImage+props.item.gallery[0].url})`,backgroundSize:'contain',backgroundRepeat:'no-repeat',width:'100%' , height:'180px'}} ></div>
+        <div className="food-col-image col-6" style={{background:`url(${baseURLImage+ props.item.gallery[0] == "" || props.item.gallery[0] == undefined ? '' : baseURLImage+props.item.gallery[0].url})`,backgroundRepeat:'no-repeat',height: '120px',
+  backgroundSize: 'contain !important',
+  backgroundRepeat: 'no-repeat !important',
+  width: '100%'
+}} ></div>
 
        </Link>
         </Paper>

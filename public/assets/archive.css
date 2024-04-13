@@ -1,6 +1,7 @@
 .archive-banner{
     background-color: #C90000;
-    height: 200px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 .archive-banner img{
     width: 100px;
