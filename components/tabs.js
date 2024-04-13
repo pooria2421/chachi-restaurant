@@ -202,7 +202,7 @@ archives.map((element)=>(
 
   list.map(element=>(
 
-      <FoodCol productName={element.productName} productPrice={element.productPrice} productDescription={element.productDescription} productStar={element.productStar} gallery={element.gallery}/>
+      <FoodCol productName={element.productName} productPrice={element.productPrice == null ? '' : element.productPrice} productDescription={element.productDescription} productStar={element.productStar} gallery={element.gallery}/>
         ))
         
 }

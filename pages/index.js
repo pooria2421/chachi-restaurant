@@ -44,6 +44,7 @@ export default function mainPage(){
             : "",
         }));
 
+        
         setArchives(achiveList);
       })
 
@@ -111,7 +112,13 @@ export default function mainPage(){
 
             
            <div className="col-4 archive-image p-3 mt-2">
-            <Link href={`/archive/${element.archiveName}`}><img src={baseURLImage+element.gallery[0].url}/></Link>
+            <Link href={`/archive/${element.archiveName}`}>
+            {
+                element.gallery == "" || element.gallery == undefined ? '' :
+              <img src={baseURLImage+element.gallery[0].url}></img>
+              
+}
+              </Link>
             <div className="col-12 mt-2" style={{textAlign:'center'}}>{element.archiveName}</div>
            </div>
            
@@ -127,8 +134,12 @@ export default function mainPage(){
 
        
             <div className="col-12">
-            <Link href={element.bannerLink}>
+            <Link href={element.bannerLink == "" || element.bannerLink == null ? '' : element.bannerLink}>
+              {
+                element.gallery == "" || element.gallery == undefined ? '' :
               <img src={baseURLImage+element.gallery[0].url} style={{width:'100%'}}></img>
+              
+}
             </Link>
             </div>
                  )) 
