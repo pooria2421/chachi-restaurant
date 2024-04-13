@@ -133,7 +133,7 @@ export default function mainPage(){
             banners.map(element=>(
 
        
-            <div className="col-12">
+            <div className="col-12 mb-2">
             <Link href={element.bannerLink == "" || element.bannerLink == null ? '' : element.bannerLink}>
               {
                 element.gallery == "" || element.gallery == undefined ? '' :
