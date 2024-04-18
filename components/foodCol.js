@@ -21,7 +21,7 @@ export default function FoodCol({productName,productPrice,productDescription,pro
             </div>
             <div className="">
             <div className="col-6" style={{display:'flex' , flexDirection:'column' , justifyContent:'center'}}>
-            <div className="food-col-price d-flex" style={{padding:'0px !important'}}><span style={{fontWeight:'bolder',borderRadius:'10px' , fontSize:'17px',fontWeight:'bolder'}}>{toRial(productPrice.toString())}</span> <span className="d-flex align-items-center" style={{fontSize:'11px',color:'#888',paddingRight:'3px',paddingLeft:'0px'}}>{productPrice == "" ? '---' : 'تومان'}</span></div>
+            <div className="food-col-price d-flex" style={{padding:'0px !important'}}><span style={{fontWeight:'bolder',borderRadius:'10px' , fontSize:'15px',fontWeight:'bolder'}}>{toRial(productPrice.toString())}</span> <span className="d-flex align-items-center" style={{fontSize:'11px',color:'#fff',paddingRight:'3px',paddingLeft:'0px'}}>{productPrice == "" ? '---' : 'تومان'}</span></div>
           
             </div>
             {/* <Rating name="disabled" value={productStar} disabled /> */}
